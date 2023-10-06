@@ -10,8 +10,16 @@ public class ArrayChallange3 {
         int[] returnedArray = readIntegers();
         System.out.println(Arrays.toString(returnedArray));
 
-        int returnedMin = fintMin(returnedArray);
+        int returnedMin = findMin(returnedArray);
         System.out.println("Min = " + returnedMin);
+
+        System.out.println(("").repeat(30));
+
+        reverse(returnedArray);
+        System.out.println("Final = " + Arrays.toString(returnedArray));
+
+        System.out.println(("-").repeat(30));
+        System.out.println("Reversed of reversed array = " + Arrays.toString(reverseCopy(returnedArray)));
 
     }
 
@@ -30,7 +38,7 @@ public class ArrayChallange3 {
 
     }
 
-    private static int fintMin(int[] array) {
+    private static int findMin(int[] array) {
         int min = Integer.MAX_VALUE;
 
         for (int el : array) {
@@ -40,5 +48,26 @@ public class ArrayChallange3 {
         }
         return min;
 
+    }
+
+    private static void reverse(int[] array) {
+        int maxIndex = array.length - 1;
+        int halfLength = array.length / 2;
+
+        for (int i = 0; i < halfLength; i++) {
+            int temp = array[i];
+            array[i] = array[maxIndex - i];
+            array[maxIndex - i] = temp;
+        }
+    }
+
+    private static int[] reverseCopy(int[] array) {
+        int[] reversedArray = new int[array.length];
+        int maxIndex = array.length - 1;
+        for (int el : array) {
+            reversedArray[maxIndex--] = el;
+
+        }
+        return reversedArray;
     }
 }
