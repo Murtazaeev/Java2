@@ -1,5 +1,8 @@
 package ArrayLists.MobilePhoneChallenge;
 
+
+import java.util.LinkedList;
+
 public class Contact {
     private String name;
     private String phoneNumber;
@@ -8,6 +11,7 @@ public class Contact {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
+
 
     public String getName() {
         return name;
@@ -19,4 +23,5 @@ public class Contact {
     public static Contact createContact(String name, String phoneNumber){
        return new Contact(name, phoneNumber);
     }
+
 }
