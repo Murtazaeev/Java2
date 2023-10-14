@@ -41,7 +41,7 @@ class Bank {
     public void addNewCustomer(String customerName, double initialDeposit) {
 
         if (getCustomer(customerName) == null) {
-            Customer customer = new Customer((customerName, initialDeposit);
+            Customer customer = new Customer(customerName, initialDeposit);
             customers.add(customer);
             System.out.println("New Customer added: " + customer);
         }
