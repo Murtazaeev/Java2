@@ -1,5 +1,5 @@
 package Abstraction.secondChallenge;
-ppublic class Node extends ListItem{
+public class Node extends ListItem{
 
     public Node(Object value) {
         super(value);
