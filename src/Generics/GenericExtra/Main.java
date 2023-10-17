@@ -17,6 +17,7 @@ public class Main {
         }
         students.add(new LPAStudent());
         printList(students);
+        prinMoretList(students);
 
         List<LPAStudent> lpaStudents = new ArrayList<>();
         for (int i = 0; i < studentCount; i++) {
@@ -25,10 +26,17 @@ public class Main {
         printList(lpaStudents);
     }
 
-    public static void printList(List students) {
+    public static <T extends Student> void printList(List<T> students) {
 
         for (var student : students) {
-            System.out.println(student);
+            System.out.println(student.getYearStarted() + ": " + student);
+        }
+        System.out.println();
+    }
+    public static void prinMoretList(List<? extends Student> students) {
+
+        for (var student : students) {
+            System.out.println(student.getYearStarted() + ": " + student);
         }
         System.out.println();
     }
