@@ -1,4 +1,4 @@
-package LinkedLists.LinkedListChallenge;
+package LinkedLists;
 
 import java.util.LinkedList;
 import java.util.Scanner;

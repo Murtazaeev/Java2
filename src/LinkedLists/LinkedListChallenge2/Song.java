@@ -1,4 +1,4 @@
-package LinkedLists.LinkedListChallenge.LinkedListChallenge2;
+package LinkedLists.LinkedListChallenge2;
 
 public class Song {
 

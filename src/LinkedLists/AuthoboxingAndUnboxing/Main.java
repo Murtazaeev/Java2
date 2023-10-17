@@ -1,7 +1,6 @@
-package LinkedLists.LinkedListChallenge.AuthoboxingAndUnboxing;
+package LinkedLists.AuthoboxingAndUnboxing;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 record Customer(String name, ArrayList<Double> transactions) {
     public Customer(String name, double initialDeposit) {

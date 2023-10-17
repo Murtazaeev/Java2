@@ -1,4 +1,4 @@
-package LinkedLists.LinkedListChallenge.Banking;
+package LinkedLists.Banking;
 
 import java.util.ArrayList;
 
