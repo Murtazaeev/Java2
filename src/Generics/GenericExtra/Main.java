@@ -2,6 +2,7 @@ package Generics.GenericExtra;
 
 import Generics.GenericExtra.model.LPAStudent;
 import Generics.GenericExtra.model.Student;
+import Generics.GenericExtra.utill.QueryList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,19 @@ public class Main {
             lpaStudents.add(new LPAStudent());
         }
         printList(lpaStudents);
+
+        var queryList = new QueryList<>(lpaStudents);
+        var matches = queryList.getMatches(
+                "Course", "Python"
+        );
+
+        prinMoretList(matches);
+
+        var students2021 =
+                QueryList.getMatches(students, "YearStarted", "2021");
+        prinMoretList(students2021);
+
+//        QueryList<Employee> employeeList = new QueryList<>();
     }
 
     public static <T extends Student> void printList(List<T> students) {
@@ -33,6 +47,7 @@ public class Main {
         }
         System.out.println();
     }
+
     public static void prinMoretList(List<? extends Student> students) {
 
         for (var student : students) {
